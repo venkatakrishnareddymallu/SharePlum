@@ -1,0 +1,102 @@
+<!-- <% var g_data = data %>
+    <div class="tab-pane fade <%= (url.searchKey.tab && url.searchKey.tab === 'billing') ? 'active show' : '' %>" id="v-pills-messages"
+        role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <div class="container template">
+            <form class="billing-form" method="POST" action="billing" enctype="multipart/form-data">
+              <input type="hidden" name="_xsrf" value="<%= xsrf %>" />
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row mt-2">
+                            <div class="col-6 ml-5">
+                                <div class="row">
+                                    <div class="col-6">FY</div>
+                                    <div class="col-6">
+                                        <select id="fy_billing" data-val="fy_billing" class="dropdown_bill">
+                                            <% data = _.values(g_data[0])[0] %>
+                                                <% _.map(data.map(a => a.year), function(i) {%>
+                                                    <option value="<%= i%>">
+                                                        <%= i%>
+                                                    </option>
+                                                    <%})%>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">Month</div>
+                                    <div class="col-6">
+                                        <select id="month_billing" data-val="month_billing" class="dropdown_bill">
+                                            <% data = _.values(g_data[0])[0] %>
+                                                <% _.map(data.map(a => a.month), function(i) {%>
+                                                    <option value="<%= i%>">
+                                                        <%= i%>
+                                                    </option>
+                                                    <%})%>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">No.of working days</div>
+                                    <div class="col-6 mt-2">
+                                        <input type="number" placeholder="0.0" name="working_days" data-val="working_days" class="dropdown_bill" min="0" value="0" step="0.1" />
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">Project Code</div>
+                                    <div class="col-6">
+                                        <select id="p_code_billing" data-val="p_code_billing" class="dropdown_bill"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row mt-2">
+                            <div class="col-6 ml-5">
+                                <div class="row">
+                                    <div class="col-6">SBU</div>
+                                    <div class="col-6">
+                                        <input type="text" id="sbu_billing" class="auto_sbu" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">ProjectName</div>
+                                    <div class="col-6">
+                                        <input type="text" id="p_name_billing" class="auto_p_name" size="35" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">Account</div>
+                                    <div class="col-6">
+                                        <input type="text" id="account_billing" class="auto_account" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-6">Billing Type</div>
+                                    <div class="col-6">
+                                        <select id="billing_type" data-val="billing_type" class="dropdown_bill">
+                                            <% data = _.values(g_data[2])[0] %>
+                                                <% _.map(data.map(a => a.type), function(i) {%>
+                                                    <option value="<%= i%>">
+                                                        <%= i%>
+                                                    </option>
+                                                    <%})%>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <button type="submit" id="submit_billing" class="btn btn-default w-100">Submit</button>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </form>
+            <div class="row mt-5">
+                <div class="user_formhandler w-100" data-page-size="6" data-src="./render"></div>
+            </div>
+        </div>
+    </div> -->

@@ -1,0 +1,92 @@
+.navbar-nav> .navbar-brand{
+    color: white;
+}
+
+.sidenav{
+    height: 90vh;
+}
+
+.header{
+    height: 10vh;
+    background-color: #17a2b8 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black !important;
+    background-color: white !important
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+#sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+}
+
+#sidebar .toggle-btn{
+    position: absolute;
+    left: 230px;
+    top: 20px;
+}
+
+.navbutton{
+    font-size: 22px !important;
+    color: white;
+}
+
+button {
+    color: white !important;
+    background-color: #17a2b8 !important
+}
+
+.logout {
+    color: white !important
+}
+
+.user_formhandler {
+    overflow-y: scroll;
+}
+
+.btn-light {
+    display: none;
+}
+
+.loader {
+    position: fixed;
+    left:40%;
+    top: 40%;
+    width: 250px;
+    height: 250px;
+    z-index: 9999;
+    background: url('Infinity-5.7s-176px.gif') 50% 50% no-repeat;
+}
+
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.background {
+    position: fixed;
+    background: #ccc;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    -ms-opacity: 0.9;
+    -webkit-opacity: 0.8;
+    -moz-opacity: 0.8;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+  }

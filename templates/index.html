@@ -1,0 +1,123 @@
+{% raw %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>New folder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% endraw %}
+   <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/datatables/media/css/jquery.dataTables.min.css') }}">
+  {% raw %}
+</head>
+
+<body>
+  <div class="background">
+    <div class="loader">
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light header">
+    <div class="container-fluid">
+      <div class="nav navbar-nav">
+        <span class="fa fa-bars pl-0 m-auto navbutton cursor-pointer"></span>
+        {% endraw %}
+        <img src="{{ url_for('static', filename='gramener.png') }}" width="142" height="40" alt="img" class="pl-2 ml-2">
+        {% raw %}
+      </div>
+      <ul class="nav navbar-nav mr-5">
+        <li class="navbar-brand">BECM PRODUCT ATTRIBUTE TRACKER</li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="login" class="username" title="Log in again" data-placement="bottom"></a>
+        </li>
+        <li>
+          <a href="logout" title="Log out" data-placement="bottom">
+            <span class="fa fa-sign-out logout"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="sidenav">
+    <div class="row h-100 mx-0">
+      <div class="col-2 border bg-info h-100 p-0 border-0 sidemenu">
+        <div class="nav flex-column nav-pills position-relative" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="btn btn-primary text-left bg-white text-dark border-0 rounded-0 dropdown-toggle" type="button" data-toggle="collapse"
+            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Other Inputs
+          </button>
+          <div class="collapse" id="collapseExample">
+              {% endraw %}
+              <input type="hidden" name="csrf_token" id="csrf" value="{{ csrf_token() }}"/>
+              {% raw %}
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link text-white rounded-0 bg-transparent" id="v-pills-home-tab" data="cost" data-toggle="pill" href="#v-pills-home"
+                    role="tab" aria-controls="v-pills-home" aria-selected="true">Check Labels</a>
+                  <a class="nav-link text-white rounded-0 bg-transparent" id="v-pills-profile-tab" data="expenditure" data-toggle="pill" href="#v-pills-profile"
+                    role="tab" aria-controls="v-pills-profile" aria-selected="false">GetConfig Specs</a>
+                    <a class="nav-link text-white rounded-0 bg-transparent" id="v-pills-message-tab" data="revenue" data-toggle="pill" href="#v-pills-message"
+                    role="tab" aria-controls="v-pills-message" aria-selected="true">Email</a>
+              </div>
+          </div>
+        </div>
+        <div class="nav flex-column nav-pills  position-relative" id="v-pills-tab-1" role="tablist" aria-orientation="vertical">
+          <button class="btn btn-primary text-left bg-white text-dark border-0 rounded-0 dropdown-toggle" type="button" data-toggle="collapse"
+            data-target="#collapseExample-1" aria-expanded="false" aria-controls="collapseExample">
+            Label Matrix
+          </button>
+          <div class="collapse" id="collapseExample-1">
+            <script type="text/html" id="left_navbar">
+            <div class="nav flex-column nav-pills" id="v-pills-tab-1" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active text-white rounded-0 bg-transparent go_tab <%= tab=='new' ? 'active' : ''%>" id="v-pills-home-tab" data="new" data-toggle="pill" href="#v-pills-home"
+                role="tab" aria-controls="v-pills-report1" aria-selected="true">New</a>
+              <a class="nav-link text-white rounded-0 bg-transparent go_tab <%= tab=='edit' ? 'active' : ''%>" id="v-pills-profile-tab" data="edit" data-toggle="pill" href="#v-pills-profile"
+                role="tab" aria-controls="v-pills-report2" aria-selected="false">Edit</a>
+              <a class="nav-link text-white rounded-0 bg-transparent go_tab <%= tab=='update' ? 'active' : ''%>" id="v-pills-update-tab" data="update" data-toggle="pill" href="#v-pills-update"
+                role="tab" aria-controls="v-pills-report3" aria-selected="false">Update</a>
+            </div>
+          </script>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="tab-content" id="v-pills-tabContent">
+          {% endraw %}
+          <script type="text/html" src="{{ url_for('static', filename='cost.html') }}" id="cost_template"></script>
+          <script type="text/html" src="{{ url_for('static', filename='estimate.html') }}" id="edit_template"></script>
+          <script type="text/html" src="{{ url_for('static', filename='expenditure.html') }}" id="update_template"></script>
+          <script type="text/html" src="{{ url_for('static', filename='revenue.html') }}" id="estimate_template"></script>
+          {% raw %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endraw %}
+<script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='g1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='lodash.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='node_modules/datatables.net-select/js/dataTables.select.min.js') }}"></script>
+{% raw %}
+</body>
+</div>
+</html>
+
+<!--
+  D3: ui/d3/build/d3.min.js
+  Lodash: ui/lodash/lodash.min.js
+  Moment: ui/moment/min/moment-with-locales.min.js
+  Noty: ui/noty/lib/noty.min.js
+  Daterangepicker: ui/daterangepicker/daterangepicker.js
+  Leaflet: ui/leaflet/dist/leaflet.js
+  TopoJSON: ui/topojson/dist/topojson.min.js
+  g1: ui/g1/dist/g1.min.js
+-->
+
+{% endraw %}

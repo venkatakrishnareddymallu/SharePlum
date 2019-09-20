@@ -1,0 +1,55 @@
+<div class="tab-pane fade <%= (!url.searchKey.tab || url.searchKey.tab === 'update') ? 'active show' : '' %>" id="v-pills-update"
+    role="tabpanel" aria-labelledby="v-pills-update-tab">
+    <div class="container template">
+      <form class="expense-input" enctype="multipart/form-dat`a">
+        <div class="row mt-5">
+          <div class="col-4 ml-5">
+            <div class="row">
+              <div class="col-6">Program</div>
+              <div class="col-6">
+                <select id="program_update" name="exp_projname_selected" data-val="p_name" class="dropdown_list"></select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Status</div>
+              <div class="col-6">
+                <select id="status_update" data-val="month" name="exp_month" class="dropdown_list">
+                      <option value="test">Activate
+                      </option>
+                      <option value="test">Complete
+                      </option>
+                      <option value="test">Cancelled
+                      </option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Exp Rel Name</div>
+              <div class="col-6">
+                <select id="update_exprel" data-val="exp_rel" name="exp_rel" class="dropdown_list">
+                      <option value="test">test
+                      </option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">New Status</div>
+              <div class="col-6">
+                <select id="update_newstatus" data-val="exp_rel" name="exp_status" class="dropdown_list">
+                  <option value="test">Activate
+                  </option>
+                  <option value="test">Complete
+                  </option>
+                  <option value="test">Cancelled
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row p-5">
+                <button type="button" class="btn btn-default w-100" id="submit_update">Update</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

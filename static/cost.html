@@ -1,0 +1,72 @@
+<% var url = g1.url.parse(location.href)%>
+<div class="tab-pane fade <%= (!url.searchKey.tab || url.searchKey.tab === 'new') ? 'active show' : '' %>" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <div class="container template">
+      <form class="cost_input" enctype="multipart/form-data">
+        <input type="hidden" name="_xsrf" value="<%= csrf %>">
+        <div class="row mt-5">
+          <div class="col-4 ml-5">
+            <div class="row mt-5">
+              <div class="col-6" id="dropdown_label">Program</div>
+              <div class="col-6">
+                <select id="dropdown_values" class="unique" name="program">
+                  <% _.forEach(data.program, function(d){%>
+                  <option value="<%= d['Title']%>"><%= d['Title']%></option>
+                  <%})%>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Status</div>
+              <div class="col-6">
+                <select id="status" name="status">
+                  <option value="activate">Activate</option>
+                  <option value="complete">Complete</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Feature</div>
+              <div class="col-6">
+                <select id="feat" name="feature">
+                  <% _.forEach(data.feature, function(d){%>
+                  <option value="<%= d['Title']%>"><%= d['Title']%></option>
+                  <%})%>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Rel Name</div>
+              <div class="col-6">
+                <select id="rel_name" name="rel name">
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">Exp Rel Name</div>
+              <div class="col-6">
+                <select id="ex_rel_name" name="exp rel name">
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">CR'S</div>
+              <div class="col-6">
+                <select id="crs" name="crs">
+                </select>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-6">CC Tag</div>
+              <div class="col-6">
+                <input type="text" id="cctag" placeholder="CC tag" name="cctag" />
+                <input type="number" name="id_val" id="prime" style="visibility: hidden"/>
+              </div>
+            </div>
+            <div class="row p-5">
+              <button type="button" class="btn btn-default w-100" id="submit_form">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
